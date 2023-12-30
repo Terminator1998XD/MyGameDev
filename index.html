@@ -1,0 +1,116 @@
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+document.title = 'Игры от Terminator1998';
+
+$(document).ready(function(){
+	var body = $('body');
+	body.append(getHeader());
+	var games = getGames();
+	for(let i = 0; i < games.length; i++){
+		games[i] = getGame(games[i]);
+	}
+	body.append(games);
+});
+
+function getHeader(){
+	return $('<header>').text(document.title);
+}
+
+function getGame(game){
+	const {name, img, href} = game;	
+	return $('<game>').append(
+		$('<img>').attr('src',img),
+		'<p>'+name+'</p>'
+	).click(function(){
+		window.location = href;
+	});
+}
+
+function getGames(){
+	return [
+	{
+		name : 'Minecraft Тест и Пазлы',
+		img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb60e5c0e522d2862e852a389aa/cover1',
+		href: 'https://yandex.ru/games/app/282993'
+	},
+	{
+		name : 'Skibidi War',
+		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018c4cc7065b38690a3feb6543bc45/cover1',
+		href: 'https://yandex.ru/games/app/270667?lang=ru'
+	},
+	{
+		name : 'Глобальный GTA Тест',
+		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
+		href: 'https://yandex.ru/games/app/269912?lang=ru'
+	},
+	{
+		name : 'Развивайся со скибиди туалетом',
+		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018c59bb38f68549ad31ef318844e1/cover1',
+		href: 'https://yandex.ru/games/app/278465?lang=ru'
+	},
+	{
+		name : 'Нубик пуля',
+		img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018c1aa5215aaa0696688506e46fe0/cover1',
+		href: 'https://yandex.ru/games/app/275311?lang=ru'
+	},
+	{
+		name : 'Глобальный Аниме Тест',
+		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018c49dbb94a96e1088379d36d9104/cover1',
+		href: 'https://yandex.ru/games/app/277539?lang=ru'
+	},
+	{
+		name : 'Симулятор Акулы',
+		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018bc918654bca4c85e0e0dcbe7c09/cover1',
+		href: 'https://yandex.ru/games/app/271227?lang=ru'
+	},
+	{
+		name : 'Высший пилотаж от нубика',
+		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018c1061b437c87b43b0d184ce2f39/cover1',
+		href: 'https://yandex.ru/games/app/274019?lang=ru'
+	},
+	{
+		name : 'Нубик в лодке',
+		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018c0c78264315e9fe595d93609f6a/cover1',
+		href: 'https://yandex.ru/games/app/273896?lang=ru'
+	}
+]
+}
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+html, body{
+ margin:0;
+ padding:0;
+ background-color: #dbf4ff;
+ font-family: 'Inconsolata', monospace;
+ overflow: hidden;
+}
+
+header{
+	text-align:center;
+	width: 100%;	
+	background-color: #69d2ff;
+	padding: 4vh;
+	font-size:3vw;
+	color:white;
+}
+
+game{
+	display: inline-block;	
+	width: 8vw;
+	height: 8vw;
+	margin: 2vw;
+	cursor: pointer;
+	text-align:center;
+	font-size: 0.5vw;
+	transition: 0.5s ease;
+}
+game:hover{
+	width: 9vw;
+	height: 9vw;
+}
+game img{
+	width:100%;
+	height:100%;
+}
+</style>
