@@ -10,10 +10,18 @@ $(document).ready(function(){
 		games[i] = getGame(games[i]);
 	}
 	body.append(games);
+	body.append(getFooter());
 });
 
 function getHeader(){
 	return $('<header>').text(document.title);
+}
+
+function getFooter(){
+	return $('<footer>').append([
+		$('<a>').text('Мой ВК').attr('href','https://vk.com/terminator1998').css({'float':'left'}),
+		$('<a>').text('Задонатить мне').attr('href','https://www.donationalerts.com/r/xtermin1998').css({'float':'right','padding-right':'4vw'})
+	]);
 }
 
 function getGame(game){
@@ -72,6 +80,16 @@ function getGames(){
 		name : 'Нубик в лодке',
 		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018c0c78264315e9fe595d93609f6a/cover1',
 		href: 'https://yandex.ru/games/app/273896?lang=ru'
+	},
+	{
+		name : 'Worm Shooter',
+		img: 'https://avatars.mds.yandex.net/get-games/6300668/2a0000018b6ff34eacf493f9de3122ae6c15/cover1',
+		href: 'https://yandex.ru/games/app/266268?lang=ru'
+	},
+	{
+		name : '5G Апокалипсис',
+		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018b8a63f9dc24c9f0abc67b651d2f/cover1',
+		href: 'https://yandex.ru/games/app/267993?lang=ru'
 	}
 ]
 }
@@ -93,6 +111,17 @@ header{
 	padding: 4vh;
 	font-size:3vw;
 	color:white;
+}
+
+footer{
+	width: 100%;	
+	background-color: #69d2ff;
+	padding: 3vh;
+	font-size:2vh;
+	color:white;
+	position:absolute;
+	left:0;
+	bottom:0;
 }
 
 game{
