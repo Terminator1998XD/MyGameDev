@@ -5,9 +5,12 @@ document.title = 'Игры от Terminator1998';
 $(document).ready(function(){
 	var body = $('body');
 	body.append(getHeader());
+	body.append(getFilters());
 	var games = getGames();
 	for(let i = 0; i < games.length; i++){
+		const flag = games[i]['download'] != null;
 		games[i] = getGame(games[i]);
+		if(flag) games[i].hide();
 	}
 	body.append(games);
 	body.append(getFooter());
@@ -15,6 +18,25 @@ $(document).ready(function(){
 
 function getHeader(){
 	return $('<header>').text(document.title);
+}
+
+function getFilters(){
+	return $('<filters>').append(
+		$('<p id="1">').text("> Без скачивания").click(function(){
+			$('.nodownload').show(300);
+			$('.download').hide(300);
+
+			$('filters #1').text('> Без скачивания');
+			$('filters #2').text('Со скачиванием');
+		}),
+		$('<p id="2">').text("Со скачиванием").click(function(){
+			$('.nodownload').hide(300);
+			$('.download').show(300);
+
+			$('filters #1').text('Без скачивания');
+			$('filters #2').text('> Со скачиванием');
+		})
+	);
 }
 
 function getFooter(){
@@ -25,13 +47,12 @@ function getFooter(){
 }
 
 function getGame(game){
-	const {name, img, href} = game;	
 	return $('<game>').append(
-		$('<img>').attr('src',img),
-		'<p>'+name+'</p>'
+		$('<img>').attr('src',game.img),
+		'<p>'+game.name+'</p>'
 	).click(function(){
-		window.open(href, '_blank');
-	});
+		window.open(game.href, '_blank');
+	}).attr('class', game['download'] == null ? 'nodownload':'download');
 }
 
 function getGames(){
@@ -40,6 +61,12 @@ function getGames(){
 		name: 'Симулятор пранкера',
 		img : 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb5f7edcda8d5f9ecd7b47b7e9f/cover1',
 		href: 'https://yandex.ru/games/app/283060?lang=ru'
+	},
+	{
+		name: 'War Reborn',
+		img: 'https://i.imgur.com/oAGAzBE.png',
+		href: 'https://disk.yandex.ru/d/Md9JLO-e2z-frw',
+		download:true
 	},
 	{
 		name: "Angry Toilets",
@@ -70,6 +97,11 @@ function getGames(){
 		name: 'Слаймы',
 		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
 		href: 'https://yandex.ru/games/app/289283'
+	},
+	{
+		name: 'Прокати девушку по кругу',
+		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
+		href: 'https://yandex.ru/games/app/290879'
 	},
 	{
 		name: 'Ловля шариков по цвету',
@@ -150,7 +182,7 @@ function getGames(){
 		name : '5G Апокалипсис',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018b8a63f9dc24c9f0abc67b651d2f/cover1',
 		href: 'https://yandex.ru/games/app/267993?lang=ru'
-	}		
+	}
 ]
 }
 </script>
@@ -161,12 +193,12 @@ html, body{
  padding:0;
  background-color: #dbf4ff;
  font-family: 'Inconsolata', monospace;
- overflow: hidden;
+ overflow-x:hidden;
 }
 
 header{
 	text-align:center;
-	width: 100%;	
+	width: 100%;
 	background-color: #69d2ff;
 	padding: 4vh;
 	font-size:3vw;
@@ -174,18 +206,34 @@ header{
 }
 
 footer{
-	width: 100%;	
+	width: 100%;
 	background-color: #69d2ff;
 	padding: 3vh;
 	font-size:2vh;
 	color:white;
-	position:absolute;
+	position:fixed;
 	left:0;
 	bottom:0;
 }
 
+filters{
+	position:absolute;
+	top: 0;
+	right: 2vw;
+}
+
+filters p{
+	cursor: pointer;
+	color: white;
+	font-size: 3vh;
+}
+
+filters p:hover{
+	color: #3892ec;
+}
+
 game{
-	display: inline-block;	
+	display: inline-block;
 	width: 8vw;
 	height: 8vw;
 	margin: 2vw;
