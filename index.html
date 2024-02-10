@@ -22,19 +22,29 @@ function getHeader(){
 
 function getFilters(){
 	return $('<filters>').append(
-		$('<p id="1">').text("> Без скачивания").click(function(){
+		$('<div id="1">').text("> Без скачивания").click(function(){
 			$('.nodownload').show(300);
 			$('.download').hide(300);
 
 			$('filters #1').text('> Без скачивания');
 			$('filters #2').text('Со скачиванием');
+			$('filters #3').text('Мобильные');
 		}),
-		$('<p id="2">').text("Со скачиванием").click(function(){
+		$('<div id="2">').text("Со скачиванием").click(function(){
 			$('.nodownload').hide(300);
 			$('.download').show(300);
 
 			$('filters #1').text('Без скачивания');
 			$('filters #2').text('> Со скачиванием');
+			$('filters #3').text('Мобильные');
+		}),
+		$('<div id="3">').text("Мобильные").click(function(){
+			$('game:not(.mobile)').hide(300);
+			$('.mobile').show(300);
+
+			$('filters #1').text('Без скачивания');
+			$('filters #2').text('Со скачиванием');
+			$('filters #3').text('> Мобильные');
 		})
 	);
 }
@@ -52,7 +62,7 @@ function getGame(game){
 		'<p>'+game.name+'</p>'
 	).click(function(){
 		window.open(game.href, '_blank');
-	}).attr('class', game['download'] == null ? 'nodownload':'download');
+	}).attr('class', (game['download'] == null ? 'nodownload':'download') + (game['mobile'] == null ? '':' mobile'));
 }
 
 function getGames(){
@@ -71,7 +81,8 @@ function getGames(){
 	{
 		name: "Angry Toilets",
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018ce46752871677f39a5385cdf076/cover1',
-		href: 'https://yandex.ru/games/app/283371?lang=ru'
+		href: 'https://yandex.ru/games/app/283371?lang=ru',
+		mobile: true
 	},
 	{
 		name : 'Minecraft Тест и Пазлы',
@@ -86,62 +97,74 @@ function getGames(){
 	{
 		name: 'Ниндзя Симулятор',
 		img:'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d031ba4512c5feaaa9f320e4872/icon1',
-		href: 'https://yandex.ru/games/app/286481?lang=ru'
+		href: 'https://yandex.ru/games/app/286481?lang=ru',
+		mobile: true
 	},
 	{
 		name: '2048 Стрелялка',
 		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d558886629fa4eee604de406902/cover1',
-		href: 'https://yandex.ru/games/app/290170'
+		href: 'https://yandex.ru/games/app/290170',
+		mobile: true
 	},
 	{
 		name: 'Слаймы',
 		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
-		href: 'https://yandex.ru/games/app/289283'
+		href: 'https://yandex.ru/games/app/289283',
+		mobile: true
 	},
 	{
 		name: 'Прокати девушку по кругу',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
-		href: 'https://yandex.ru/games/app/290879'
+		href: 'https://yandex.ru/games/app/290879',
+		mobile: true
 	},
 	{
 		name: 'Ловля шариков по цвету',
 		img: 'https://avatars.mds.yandex.net/get-games/6300668/2a0000018d077ddd2c09a48f24a59e395c2b/cover1',
-		href: 'https://yandex.ru/games/app/286735'
+		href: 'https://yandex.ru/games/app/286735',
+		mobile: true
 	},
 	{
 		name: 'Cимулятор Космонавта',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
-		href: 'https://yandex.ru/games/app/286735'
+		href: 'https://yandex.ru/games/app/286735',
+		mobile: true
 	},
 	{
 		name: 'Красный шар: убегай от лавы',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d27384f04140b1ea604b893c9cc/cover1',
-		href: 'https://yandex.ru/games/app/286735'
+		href: 'https://yandex.ru/games/app/286735',
+		mobile: true
 	},
 	{
 		name: 'Неоновая птица',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2725dbcaaf7433070a6b737ca5/cover1',
-		href: 'https://yandex.ru/games/app/286735'
+		href: 'https://yandex.ru/games/app/286735',
+		mobile: true
 	},
 	{
 		name: 'Симулятор Пчелы',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018d54fc0423577a623be7f22c605f/icon1',
-		href: 'https://yandex.ru/games/app/290763'
+		href: 'https://yandex.ru/games/app/290763',
+		mobile: true
 	},
 	{
 		name: 'Клади дорогу',
 		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d30365bb115347dcd0a1b97c5a2/icon1',
-		href: 'https://yandex.ru/games/app/288642'
+		href: 'https://yandex.ru/games/app/288642',
+		mobile: true
 	},
 	{
 		name: 'Симулятор Панды',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2741033702edf4f08f04d4e31b/cover1',
-		href: 'https://yandex.ru/games/app/286735'
+		href: 'https://yandex.ru/games/app/286735',
+		mobile: true
 	},
 	{
 		name : 'Глобальный GTA Тест',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
-		href: 'https://yandex.ru/games/app/269912?lang=ru'
+		href: 'https://yandex.ru/games/app/269912?lang=ru',
+		mobile: true
 	},
 	{
 		name : 'Развивайся со скибиди туалетом',
@@ -156,7 +179,8 @@ function getGames(){
 	{
 		name : 'Глобальный Аниме Тест',
 		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018c49dbb94a96e1088379d36d9104/cover1',
-		href: 'https://yandex.ru/games/app/277539?lang=ru'
+		href: 'https://yandex.ru/games/app/277539?lang=ru',
+		mobile: true
 	},
 	{
 		name : 'Симулятор Акулы',
@@ -218,18 +242,29 @@ footer{
 
 filters{
 	position:absolute;
-	top: 0;
+	top: 0.5vh;
 	right: 2vw;
 }
 
-filters p{
+filters div{
 	cursor: pointer;
 	color: white;
 	font-size: 3vh;
 }
 
-filters p:hover{
+filters div:hover{
 	color: #3892ec;
+	margin: 0;
+	padding:0;
+}
+
+@media(max-width: 900px){
+	header{
+		text-align:unset;
+	}
+	filters div{
+		font-size: 2vh;
+	}
 }
 
 game{
