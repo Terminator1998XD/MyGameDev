@@ -209,7 +209,7 @@ const games = [
 		name : 'Глобальный GTA Тест',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
 		href: 'https://yandex.ru/games/app/269912?lang=ru',
-		cat:'online,top,pop,mobile'
+		cat:'online,top,pop,mobile,test'
 	},
 	{
 		name : 'Симулятор Акулы',
@@ -220,19 +220,19 @@ const games = [
   {
     name:'Лови шарики по цвету',
     img: 'png/bl.png',
-    href:'/noads/balls/index.html',
+    href:'MyGameDev/noads/balls/index.html',
     cat: 'online,pop,noads'
   },
   {
     name:'Майнкрафт тест и пазлы',
     img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb60e5c0e522d2862e852a389aa/cover1',
-    href:'/noads/test/index.html',
-    cat: 'online,top,pop,noads'
+    href:'MyGameDev/noads/test/index.html',
+    cat: 'online,top,pop,noads,test'
   },
   {
     name:'Симулятор панды',
     img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2741033702edf4f08f04d4e31b/cover1',
-    href:'/noads/panda/index.html',
+    href:'MyGameDev/noads/panda/index.html',
     cat: 'online,pop,noads'
   }
 ]
