@@ -216,5 +216,23 @@ const games = [
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018bc918654bca4c85e0e0dcbe7c09/cover1',
 		href: 'https://yandex.ru/games/app/271227?lang=ru',
     cat:'online,pop'
-	}
+	},
+  {
+    name:'Лови шарики по цвету',
+    img: 'png/bl.png',
+    href:'/noads/balls/index.html',
+    cat: 'online,pop,noads'
+  },
+  {
+    name:'Майнкрафт тест и пазлы',
+    img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb60e5c0e522d2862e852a389aa/cover1',
+    href:'/noads/test/index.html',
+    cat: 'online,top,pop,noads'
+  },
+  {
+    name:'Симулятор панды',
+    img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2741033702edf4f08f04d4e31b/cover1',
+    href:'/noads/panda/index.html',
+    cat: 'online,pop,noads'
+  }
 ]
