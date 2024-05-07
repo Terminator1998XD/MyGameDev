@@ -1,387 +1,52 @@
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Игры от Terminator1998</title>
+    <script src="Games.js"></script>
+    <link rel="icon" href="favicon.png">
+    <script type="text/javascript" >
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(97218325, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/97218325" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script>
-document.title = 'Игры от Terminator1998';
+       ym(97218325, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+       });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/97218325" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <div class="menuhead">
+        <span style="float:left"><img src="favicon.png" class="logo" alt="Лого"></span>
+        <span style="float:right">
+          <div>Игры от разработчика Terminator1998</div>
+          <div style="margin-top:2vh">
+            <button type="button" name="button" onclick="window.open('https://www.donationalerts.com/r/xtermin1998','_blank')">Задонатить</button>
+            <button type="button" name="button" onclick="window.open('https://vk.com/terminator1998','_blank')">Связаться</button>
+          </div>
+        </span>
+      </div>
+      <div class="categoryes">
+        <div class="cat" tag="online">Без скачивания</div>
+        <div class="cat" tag="ofline">Со скачиванием</div>
+        <div class="cat" tag="noads">Без рекламы</div>
+        <div class="cat" tag="mobile">Мобильные</div>
+        <div class="cat" tag="top">Для геймеров</div>
+        <div class="cat" tag="pop">Для казуальщиков</div>
+        <div class="cat" tag="apps">Приложения</div>
+      </div>
+    </div>
+    <div class="content">
 
-$(document).ready(function(){
-	var body = $('body');
-	body.append(getHeader());
-	body.append(getFilters());
-	var games = getGames();
-	for(let i = 0; i < games.length; i++){
-		const flag = games[i]['download'] != null;
-		games[i] = getGame(games[i]);
-		if(flag) games[i].hide();
-	}
-	body.append(games);
-	body.append(getFooter());
-});
-
-function getHeader(){
-	return $('<header>').text(document.title);
-}
-
-function getFilters(){
-	return $('<filters>').append(
-		$('<div id="1">').text("> Без скачивания").click(function(){
-			$('.nodownload').show(300);
-			$('.download').hide(300);
-
-			$('filters #1').text('> Без скачивания');
-			$('filters #2').text('Со скачиванием');
-			$('filters #3').text('Мобильные');
-		}),
-		$('<div id="2">').text("Со скачиванием").click(function(){
-			$('.nodownload').hide(300);
-			$('.download').show(300);
-
-			$('filters #1').text('Без скачивания');
-			$('filters #2').text('> Со скачиванием');
-			$('filters #3').text('Мобильные');
-		}),
-		$('<div id="3">').text("Мобильные").click(function(){
-			$('game:not(.mobile)').hide(300);
-			$('.mobile').show(300);
-
-			$('filters #1').text('Без скачивания');
-			$('filters #2').text('Со скачиванием');
-			$('filters #3').text('> Мобильные');
-		})
-	);
-}
-
-function getFooter(){
-	return $('<footer>').append([
-		$('<a>').text('Мой ВК').attr('href','https://vk.com/terminator1998').css({'float':'left'}),
-		$('<a>').text('Задонатить мне').attr('href','https://www.donationalerts.com/r/xtermin1998').css({'float':'right','padding-right':'4vw'})
-	]);
-}
-
-function getGame(game){
-	return $('<game>').append(
-		$('<img>').attr('src',game.img),
-		'<p>'+game.name+'</p>'
-	).click(function(){
-		window.open(game.href, '_blank');
-	}).attr('class', (game['download'] == null ? 'nodownload':'download') + (game['mobile'] == null ? '':' mobile'));
-}
-
-function getGames(){
-	return [
-	{
-		name: 'Симулятор пранкера',
-		img : 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb5f7edcda8d5f9ecd7b47b7e9f/cover1',
-		href: 'https://yandex.ru/games/app/283060?lang=ru'
-	},
-	{
-		name: 'Падающие фигуры на двоих',
-		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018ef62cdfdf5c9a2cec34aea00fe4/icon1',
-		href: 'https://yandex.ru/games/app/328421?lang=ru',
-		mobile: true
-	},
-	{
-		name: 'Нубик Выживание и Войнушка',
-		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018f196428612fd7b623efc06b67d9/icon1',
-		href:'https://yandex.ru/games/app/334175',
-		mobile: true
-	},
-	{
-		name: 'Нубик качалка и драки',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018eff3fb728f3758bb1b160cdf4f8/cover1',
-		href:'https://yandex.ru/games/app/310556',
-		mobile:true
-	},
-	{
-		name: 'Шахматы 2048 - Слияние',
-		img : 'https://avatars.mds.yandex.net/get-games/3006389/2a0000018e22328678ef4bf46b61e853f9aa/cover1',
-		href: 'https://yandex.ru/games/app/297027?lang=ru',
-		mobile: true
-	},
-	{
-		name: 'Зума против фруктов',
-		img : 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018e55a440778e7da4a99349423df2/cover1',
-		href: 'https://yandex.ru/games/app/303623',
-		mobile: true
-	},
-	{
-		name: 'Планетарий',
-		img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018e9446ca5519d162a7cc7b283141/icon1',
-		href: 'https://yandex.ru/games/app/311921',
-		mobile:true
-	},
-	{
-		name: 'Оборона',
-		img: 'https://avatars.mds.yandex.net/get-games/3006389/2a0000018e83bce0cffd400f451e3ac47470/cover1',
-		href: 'https://yandex.ru/games/app/310557',
-		mobile: true
-	},
-	{
-		name: 'Остров на прокачку',
-		img : 'https://avatars.mds.yandex.net/get-games/2977039/2a0000018e379dcec279d57a71e160be5189/icon1',
-		href: 'https://yandex.ru/games/app/297810?lang=ru'
-	},
-	{
-		name: 'War Reborn',
-		img: 'https://i.imgur.com/oAGAzBE.png',
-		href: 'https://disk.yandex.ru/d/Md9JLO-e2z-frw',
-		download:true
-	},
-	{
-		name: "Angry Toilets",
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018ce46752871677f39a5385cdf076/cover1',
-		href: 'https://yandex.ru/games/app/283371?lang=ru',
-		mobile: true
-	},
-	{
-		name : 'Виртуальная Машина',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018ecc1c797059782dc6778b587e6d/icon1',
-		href: 'https://yandex.ru/games/app/313152',
-		mobile: true
-	},
-	{
-		name : 'Skibidi War',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018c4cc7065b38690a3feb6543bc45/cover1',
-		href: 'https://yandex.ru/games/app/270667?lang=ru'
-	},
-	{
-		name: 'Симулятор Ствола',
-		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d4573fd8ee28f8a6a6b05e48dcf/cover1',
-		href: 'https://yandex.ru/games/app/289424?lang=ru',
-		mobile: true
-	},
-	{
-		name: "Оптические иллюзии",
-		href: "https://yandex.ru/games/app/327905?lang=ru",
-		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ecd6766d50bbca8cc6e7c066870/cover1',
-		mobile:true
-	},
-	{
-		name: "Музыкальный Шар",
-		href: "https://yandex.ru/games/app/334912?lang=ru",
-		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018f296039bef9bc2998440c5517e6/cover1',
-		mobile:true
-	},
-	{
-		name: 'Ниндзя Симулятор',
-		img:'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d031ba4512c5feaaa9f320e4872/icon1',
-		href: 'https://yandex.ru/games/app/286481?lang=ru',
-		mobile: true
-	},
-	{
-		name: 'Защити Девушку От Зомби',
-		img:'https://avatars.mds.yandex.net/get-games/11385414/2a0000018dc78eddb18e83eed45e9dc10679/cover1',
-		href: 'https://yandex.ru/games/app/296182?lang=ru',
-		mobile: true
-	},
-	{
-		name: 'Кото-мешалка слияние котиков',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dd4c6dfa937e5819dbdad29cc19/cover1',
-		href: 'https://yandex.ru/games/app/296816?lang=ru',
-		mobile: true
-	},
-	{
-		name: '2048 Стрелялка',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018ee2ceb547829b02abd6f4425523/cover1',
-		href: 'https://yandex.ru/games/app/290170',
-		mobile: true
-	},
-	{
-		name: 'Palworld ферма',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018da68f8dbcab392567e24786eb87/cover1',
-		href: 'https://yandex.ru/games/app/292538',
-		mobile: true
-	},
-	{
-		name: 'ГТА 6 - Миссия с вертолетиком',
-		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018db23e34864156b4f946b9fd7e25/cover1',
-		href: 'https://yandex.ru/games/app/295132',
-		mobile: true
-	},
-	{
-		name: 'ГТА 6 - Ограбление Лайнера',
-		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018ddfeb7815e2fbd97aeba0642db6/cover1',
-		href: 'https://yandex.ru/games/app/296645',
-		mobile: true
-	},
-	{
-		name: 'Слаймы',
-		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
-		href: 'https://yandex.ru/games/app/289283',
-		mobile: true
-	},
-	{
-		name: 'Бешеная косилка',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dcb5b169defc4154f4e25732c57/cover1',
-		href: 'https://yandex.ru/games/app/296180',
-		mobile: true
-	},
-	{
-		name: 'Прокати девушку по кругу',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
-		href: 'https://yandex.ru/games/app/290879',
-		mobile: true
-	},	
-	{
-		name: 'Cимулятор Космонавта',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
-		href: 'https://yandex.ru/games/app/286735',
-		mobile: true
-	},
-	{
-		name: 'ChatGPT Побег',
-		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018db7da5e7b27e2e0c6c14157ee95/cover1',
-		href: 'https://yandex.ru/games/app/294018',
-		mobile: true
-	},
-	{
-		name: 'Красный шар: убегай от лавы',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d27384f04140b1ea604b893c9cc/cover1',
-		href: 'https://yandex.ru/games/app/286735',
-		mobile: true
-	},
-	{
-		name: 'Неоновая птица',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2725dbcaaf7433070a6b737ca5/cover1',
-		href: 'https://yandex.ru/games/app/286735',
-		mobile: true
-	},
-	{
-		name: 'Флекс Дэш',
-		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018e0f7f96b4c4534be4c528550b30/icon1',
-		href: 'https://yandex.ru/games/app/298578',
-		mobile: true
-	},
-	{
-		name: 'Симулятор Пчелы',
-		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018d54fc0423577a623be7f22c605f/icon1',
-		href: 'https://yandex.ru/games/app/290763',
-		mobile: true
-	},
-	{
-		name: 'Клади дорогу',
-		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d30365bb115347dcd0a1b97c5a2/icon1',
-		href: 'https://yandex.ru/games/app/288642',
-		mobile: true
-	},
-	{
-		name : 'Глобальный GTA Тест',
-		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
-		href: 'https://yandex.ru/games/app/269912?lang=ru',
-		mobile: true
-	},
-	{
-		name : 'Симулятор Акулы',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018bc918654bca4c85e0e0dcbe7c09/cover1',
-		href: 'https://yandex.ru/games/app/271227?lang=ru'
-	}
-]
-}
-</script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-html, body{
- margin:0;
- padding:0;
- background-color: #dbf4ff;
- font-family: 'Inconsolata', monospace;
- overflow-x:hidden;
-}
-
-header{
-	text-align:center;
-	width: 100%;
-	background-color: #69d2ff;
-	padding: 4vh;
-	font-size:3vw;
-	color:white;
-}
-
-footer{
-	width: 100%;
-	background-color: #69d2ff;
-	padding: 3vh;
-	font-size:2vh;
-	color:white;
-	position:fixed;
-	left:0;
-	bottom:0;
-}
-
-filters{
-	position:absolute;
-	top: 0.5vh;
-	right: 2vw;
-}
-
-filters div{
-	cursor: pointer;
-	color: white;
-	font-size: 3vh;
-}
-
-filters div:hover{
-	color: #3892ec;
-	margin: 0;
-	padding:0;
-}
-
-@media(max-width: 900px){
-	header{
-		text-align:unset;
-	}
-	filters div{
-		font-size: 2vh;
-	}
-}
-
-game{
-	display: inline-block;
-	width: 8vw;
-	height: 8vw;
-	margin: 2vw;
-	cursor: pointer;
-	text-align:center;
-	font-size: 0.5vw;
-	transition: 0.5s ease;
-}
-game:hover{
-	width: 9vw;
-	height: 9vw;
-}
-game img{
-	width:100%;
-	height:100%;
-}
-
-@media(max-width: 800px){
-	game{
-		display: block;
-		width: 80vw;
-		height: auto;
-		margin: 10px auto;
-		overflow: hidden;
-		font-size: 5vw;
-	}
-
-	game:hover{
-		width: 80vw;
-		height: auto;
-	}
-}
-</style>
+    </div>
+  </body>
+</html>

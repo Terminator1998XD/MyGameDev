@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+html, body{
+ margin:0;
+ padding:0;
+ background-color: white;
+ font-family: 'Inconsolata', monospace;
+ overflow-x:hidden;
+ overflow-y:hidden;
+ color: black;
+}
+
+.menu{
+  background-color: #242435;
+  color: white;
+  display: inline-block;
+  width: 25%;
+  height: 150vh;
+  position: absolute;
+  left:0;
+  top: 0;
+}
+
+.menuhead{
+  font-size: 1vw;
+  padding-top: 1vh;
+  padding-right: 1vw;
+  display: block;
+  width: 95%;
+  height: 8vh;
+}
+
+.menuhead button{
+  font-size: 1vw;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.menuhead button:hover{
+  filter: brightness(125%);
+}
+
+.menuhead button:active{
+  filter: brightness(75%);
+}
+
+.logo{
+  width: 4vw;
+  height: 8vh;
+}
+
+.content{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  width: 65%;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  right: 0;
+  padding: 25px;
+  overflow-y: scroll;
+}
+
+.categoryes{
+  display: block;
+  text-align: center;
+  border-top:1px solid white;
+  margin-top: 1vh;
+  padding-top: 4vh;
+  user-select: none;
+}
+
+.cat{
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  cursor: pointer;
+}
+
+.cat-select, .cat:hover{
+  background-color: #1f1f31;
+}
+
+.game{
+  display: inline-block;
+  width: 40%;
+  height: auto;
+  padding: 5px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.game:hover{
+  background-color: rgba(158, 162, 157, 0.2);
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.game img{
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.game .name{
+  font-size: 24px;
+}
+
+.gcat{
+  display: inline-block;
+  background-color: rgba(158, 162, 157, 0.15);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 2px;
+}
