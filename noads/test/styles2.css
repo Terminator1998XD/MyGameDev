@@ -1,0 +1,145 @@
+#puzzle-menu img {
+	width: 20vw;
+	height: 18vh;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	cursor: pointer;
+}
+
+#puzzle-menu img:hover{
+	border: 0.5vw solid black;
+}
+
+#puzzle-menu, #puzzle-container-inner {
+	text-align:center;
+}
+#puzzle-container-inner {
+	margin-top: 10vh;
+	background-color: rgba(255,255,255,0.93);
+}
+
+.pazlPart{
+	display: inline-block;
+	width: 32vw;
+	height: 25vh;
+	border: 1px solid green;
+}
+
+.container,.lvlinf {
+  position: absolute;
+  top:0px;
+  left:0px;
+  background-color: rgba(255,255,255,0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-container img{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.lvlinf{
+  left: 35vw;
+  top: 5vh;
+  padding: 3vh;
+  width: 30vw;
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#PUZZ h1{
+	background-color: rgba(255, 255, 255, 0.5);
+	position:absolute;
+	top:-5vh;
+	left:0px;
+	width: 100%;
+text-align:center;
+font-size: 6vh;
+}
+
+.lvlinf h3{
+	font-size: 3vh;
+}
+
+.lvlinf img{
+  width: auto;
+  width: 30vw;
+  height: 60vh;
+}
+
+#tstx{
+  font-size: 1vh+1vw;
+  z-index: 5;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1vh;
+  position: absolute;
+  left:0px;
+  top:10px;
+  right: 0px;
+  width: 100vw;
+}
+
+.quest-title
+{
+  font-size:4vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1vh;
+}
+
+.options-container {
+  position: absolute;
+  top: 13vh;
+}
+
+      .option,.option2 {
+        width: 20vw;
+        min-width: 100vw;
+        background-color: rgba(0,0,120, 0.8);
+        border: none;
+        color: white;
+        font-size: 3vh;
+		padding:0px;
+		margin:0px;
+        cursor: pointer;
+      }
+	  .option2{
+		  background-color:rgba(171, 49, 191,0.6);
+	  }
+
+@media (max-height: 300px){
+	  p{
+		  margin: 0;
+	  }
+
+	  #deadscr p, #gggame p{
+		  margin: 4vh;
+	  }
+}
+
+@media (min-height: 300px){
+	.options-container {
+	  position: absolute;
+	  top: unset;
+	  bottom:0;
+	}
+
+	.option,.option2 {
+		margin: 0.1vh;
+		padding-top:1vh;
+		padding-bottom:1vh;
+	}
+}

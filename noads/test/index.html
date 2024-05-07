@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Minecraft Тест и Пазлы</title>
+    <script src="jquery.js"></script>
+		<script src="jquery-ui.js"></script>
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+	<script src="YandexSDKFunctions.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+</head>
+<body oncontextmenu="return false;">
+<script src="game/dtc.js"></script>
+<script src="game/sounds.js"></script>
+<script src="game/game.js"></script>
+<script src="game/quistsList.js"></script>
+<script src="game/quist.js"></script>
+<script src="game/ui.js"></script>
+<script src="game/leaderboard.js"></script>
+<script src="game2/pazlRender.js"></script>
+<script src="game2/game.js"></script>
+<script src="game2/pazl.js"></script>
+
+<div id="PUZZ" style="display:none;">
+	<div id="puzzle-menu">
+		<h1>Выберите пазл</h1>
+		<p><button class="option2" onclick="ToTest()">Назад</button></p>
+	</div>
+	<div id="puzzle-container" style="display:none;">
+		<h1>Собери пазл</h1>
+		<div id="puzzle-container-inner">
+
+		</div>
+		<p><button class="option2" onclick="pToMenu()">Выход в меню</button></p>
+	</div>
+</div>
+
+<div id="TEST">
+<div id="tstx"><span id="lvlz"></span><span id="voprn"></span></div>
+
+<div class="stats1">
+  <div class="range" style="--p:100" id="hpbar">
+    <div class="range__label">Здоровье</div>
+  </div>
+</div>
+<div class="stats2">
+  <div class="range" style="--p:0" id="level">
+    <div class="range__label">Уровень</div>
+  </div>
+</div>
+
+<div class="lvlinf">
+	<div class="image-container">
+		<center>
+		<h3 class="lvl-title">
+			<span id="lvl-title-1" style="display:none">Уровень 1/4: Тест по майнкрафту без модов</span>
+			<span id="lvl-title-2" style="display:none">Уровень 2/4: Тест по мини играм</span>
+			<span id="lvl-title-3" style="display:none">Уровень 3/4: Тест по модам</span>
+			<span id="lvl-title-3" style="display:none">Уровень 4/4: Тест по ютуберам</span>
+		</h3>
+		<img class="lvl-image" alt="Загрузка...">
+		</center>
+	</div>
+</div>
+
+<div class="container" style="display:none">
+			<div class="image-container">
+				<img class="quest-image" alt="Загрузка...">
+			</div>
+      <div class="options-container">
+				<center><h3 class="quest-title">Вопрос</h3><center>
+        <p><button class="option" onclick="playerSelect(this);">Option 1</button></p>
+        <p><button class="option" onclick="playerSelect(this);">Option 2</button></p>
+        <p><button class="option" onclick="playerSelect(this);">Option 3</button></p>
+        <p><button class="option" onclick="playerSelect(this);">Option 4</button></p>
+				<p><button class="option2" onclick="pods()">Подсказка 50 / 50</button></p>
+      </div>
+</div>
+
+<div class="overlay" style="display:none">
+      <div class="content" id="startGame">
+          <h1>Minecraft Тест и Пазлы</h1>
+					<p>Уровень 1: Тест по майнкрафту без модов - 37 вопросов</p>
+					<p>Уровень 2: Тест по мини играм - 25 вопросов</p>
+					<p>Уровень 3: Тест по модам - 27 вопросов</p>
+					<p>Уровень 4: Тест по ютуберам - 11 вопросов</p>
+          <p><button onclick="PlayClick()">Пройти тест</button></p>
+		  <p><button onclick="PlayClickPazzle()">Собирать пазлы</button></p>
+      </div>
+      <div class="content" id="deadscr" style="display:none">
+          <h1>Вы умерли!</h1>
+					<p style="margin-bottom:25px;"><button onclick="NewGame()">Начать тест с начала</button><button onclick="ContinueGame()" style="background-color: orange; margin-left: 10px;">Посмотреть рекламу и продолжить</button><button style="margin-left: 10px;" onclick="PlayClickPazzle()">Собирать пазлы</button></p>
+					<p>
+						<p style="position:relative; top:-10px;">Верных ответов: <span class="v1"></span></p>
+						<div class="range lvlrange" style="--p:100;width:200px;">
+					    <div class="range__label">Уровней пройденно: <span class="lvltxt">1</span>/4</div>
+					  </div>
+					  <div class="range lvlprogbar" style="--p:100;width:200px;">
+					    <div class="range__label">Прогресс уровня</div>
+					  </div>
+					</p>
+					<p style="position:relative; top:-10px;">Ваш рекорд:</p>
+					<p style="position:relative; top:-10px;">Верных ответов: <span class="v1r"></span></p>
+					<p>
+						<div class="range lvlrange_rec" style="--p:100;width:200px;">
+					    <div class="range__label">Уровней пройдено: <span class="lvltxt_rec">0</span>/4</div>
+					  </div>
+					  <div class="range lvlprogbar_rec" style="--p:100;width:200px;">
+					    <div class="range__label">Прогресс уровня</div>
+					  </div>
+					</p>
+      </div>
+			<div class="content" id="gggame" style="display:none">
+          <h1>Поздравляем! Вы прошли игру!</h1>
+					<p style="margin-bottom:20px;"><button onclick="NewGame();$('#gggame').hide(1500);">Начать с начала</button></p>
+					<p style="position:relative; top:-10px;">Верных ответов: <span class="v1"></span></p>
+					<p>
+						<div class="range lvlrange" style="--p:100;width:200px;">
+					    <div class="range__label">Уровней пройдено: <span class="lvltxt">1</span>/4</div>
+					  </div>
+					  <div class="range lvlprogbar" style="--p:100;width:200px;">
+					    <div class="range__label">Прогресс уровня</div>
+					  </div>
+					</p>
+					<p style="position:relative; top:-10px;">Ваш рекорд:</p>
+					<p style="position:relative; top:-10px;">Верных ответов: <span class="v1r"></span></p>
+					<p>
+						<div class="range lvlrange_rec" style="--p:100;width:200px;">
+					    <div class="range__label">Уровней пройдено: <span class="lvltxt_rec">0</span>/4</div>
+					  </div>
+					  <div class="range lvlprogbar_rec" style="--p:100;width:200px;">
+					    <div class="range__label">Прогресс уровня</div>
+					  </div>
+					</p>
+      </div>
+</div>
+</div>
+</body>
+</html>
