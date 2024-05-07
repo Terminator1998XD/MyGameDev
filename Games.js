@@ -220,19 +220,19 @@ const games = [
   {
     name:'Лови шарики по цвету',
     img: 'png/bl.png',
-    href:'MyGameDev/noads/balls/index.html',
+    href:'noads/balls/index.html',
     cat: 'online,pop,noads'
   },
   {
     name:'Майнкрафт тест и пазлы',
     img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb60e5c0e522d2862e852a389aa/cover1',
-    href:'MyGameDev/noads/test/index.html',
+    href:'noads/test/index.html',
     cat: 'online,top,pop,noads,test'
   },
   {
     name:'Симулятор панды',
     img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2741033702edf4f08f04d4e31b/cover1',
-    href:'MyGameDev/noads/panda/index.html',
+    href:'noads/panda/index.html',
     cat: 'online,pop,noads'
   }
 ]
