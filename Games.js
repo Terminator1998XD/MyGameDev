@@ -59,7 +59,7 @@ const games = [
 		name: 'War Reborn',
 		img: 'https://i.imgur.com/oAGAzBE.png',
 		href: 'https://disk.yandex.ru/d/Md9JLO-e2z-frw',
-		cat:'ofline,top'
+		cat:'ofline,top,noads'
 	},
 	{
 		name: "Angry Toilets",
@@ -139,6 +139,12 @@ const games = [
 		href: 'https://yandex.ru/games/app/296645',
 		cat:'online,top,pop,mobile'
 	},
+  {
+    name:'Шейп шарики стрелялка',
+    img:'https://avatars.mds.yandex.net/get-games/2977039/2a0000018f43774fde8f1d11a2d01a39597a/cover1',
+    href: 'https://yandex.ru/games/app/336350?lang=ru',
+    cat: 'online,pop,mobile,top'
+  },
 	{
 		name: 'Слаймы',
 		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
@@ -157,7 +163,7 @@ const games = [
 		href: 'https://yandex.ru/games/app/290879',
 		cat:'online,pop,mobile'
 	},
-	{
+  {
 		name: 'Cимулятор Космонавта',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
 		href: 'https://yandex.ru/games/app/286735',
