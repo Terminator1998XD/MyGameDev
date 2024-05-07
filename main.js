@@ -37,7 +37,8 @@ function parseCats(cats){
 $(document).ready(function(){
 
   $('.cat').click(function(e){
-    const c = $(e.target).attr('tag');
+    $('.cat-select').removeClass('cat-select');
+    const c = $(e.target).addClass('cat-select').attr('tag');
     opencat(c);
     ym(97218325, 'reachGoal', 'swcat_'+c);
   });
