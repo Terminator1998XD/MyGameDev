@@ -234,5 +234,17 @@ const games = [
     img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2741033702edf4f08f04d4e31b/cover1',
     href:'noads/panda/index.html',
     cat: 'online,pop,noads'
+  },
+	{
+    name:'Симулятор Жизни',
+    img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f3c9a9d60b4d093523b79681338/cover1',
+    href:'https://yandex.ru/games/app/335178',
+    cat: 'online,pop,mobile,top'
+  },
+	{
+    name:'Пасьянс 2048',
+    img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f4cf921f41844e12b3bf9871a58/cover1',
+    href:'https://yandex.ru/games/app/336906',
+    cat: 'online,pop,mobile,top'
   }
 ]
