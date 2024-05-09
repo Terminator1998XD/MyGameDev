@@ -15,13 +15,13 @@ const games = [
 		name: 'Нубик Выживание и Войнушка',
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018f1b3061b96c9eea4ad3a49ac89c/cover1',
 		href:'https://yandex.ru/games/app/334175'
-    ,cat:'online,top,mobile'
+    ,cat:'online,top,mobile,new'
 	},
 	{
 		name: 'Нубик качалка и драки',
 		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018eff3fb728f3758bb1b160cdf4f8/cover1',
 		href:'https://yandex.ru/games/app/310556'
-		,cat:'online,top,mobile,pop'
+		,cat:'online,top,mobile,pop,new'
 	},
 	{
 		name: 'Шахматы 2048 - Слияние',
@@ -89,7 +89,7 @@ const games = [
 		name: "Оптические иллюзии",
 		href: "https://yandex.ru/games/app/327905?lang=ru",
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ecd6766d50bbca8cc6e7c066870/cover1',
-    cat:'online,pop,mobile'
+    cat:'online,pop,mobile,new'
 	},
 	{
 		name: "Музыкальный Шар",
@@ -143,7 +143,7 @@ const games = [
     name:'Шейп шарики стрелялка',
     img:'https://avatars.mds.yandex.net/get-games/2977039/2a0000018f43774fde8f1d11a2d01a39597a/cover1',
     href: 'https://yandex.ru/games/app/336350?lang=ru',
-    cat: 'online,pop,mobile,top'
+    cat: 'online,pop,mobile,top,new'
   },
 	{
 		name: 'Слаймы',
@@ -239,12 +239,12 @@ const games = [
     name:'Симулятор Жизни',
     img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f3c9a9d60b4d093523b79681338/cover1',
     href:'https://yandex.ru/games/app/335178',
-    cat: 'online,pop,mobile,top'
+    cat: 'online,pop,mobile,top,new'
   },
 	{
     name:'Пасьянс 2048',
     img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f4cf921f41844e12b3bf9871a58/cover1',
     href:'https://yandex.ru/games/app/336906',
-    cat: 'online,pop,mobile,top'
+    cat: 'online,pop,mobile,top,new'
   }
 ]
