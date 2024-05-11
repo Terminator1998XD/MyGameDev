@@ -162,13 +162,7 @@ const games = [
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
 		href: 'https://yandex.ru/games/app/290879',
 		cat:'online,pop,mobile'
-	},
-  {
-		name: 'Cимулятор Космонавта',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
-		href: 'https://yandex.ru/games/app/286735',
-		cat:'online,pop,mobile'
-	},
+	},  
 	{
 		name: 'ChatGPT Побег',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018db7da5e7b27e2e0c6c14157ee95/cover1',
@@ -184,7 +178,7 @@ const games = [
 	{
 		name: 'Неоновая птица',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2725dbcaaf7433070a6b737ca5/cover1',
-		href: 'https://yandex.ru/games/app/286735',
+		href: 'https://yandex.ru/games/app/288204?lang=ru',
 		cat:'online,pop,mobile'
 	},
 	{
@@ -235,6 +229,12 @@ const games = [
     href:'noads/panda/index.html',
     cat: 'online,pop,noads'
   },
+  {
+		name: 'Cимулятор Космонавта',
+		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
+		href: 'noads/sp/index.html',
+		cat:'online,pop,mobile,noads'
+	},
 	{
     name:'Симулятор Жизни',
     img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f3c9a9d60b4d093523b79681338/cover1',
