@@ -182,6 +182,12 @@ const games = [
 		cat:'online,pop,mobile'
 	},
 	{
+		name: 'Постройка Города Мечты',
+		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f5353a980b26e0229ed85c804d0/cover1',
+		href: 'https://yandex.ru/games/app/337339',
+		cat: 'online,pop,mobile,top'
+	},
+	{
 		name: 'Флекс Дэш',
 		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018e0f7f96b4c4534be4c528550b30/icon1',
 		href: 'https://yandex.ru/games/app/298578',
