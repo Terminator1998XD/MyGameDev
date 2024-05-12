@@ -185,7 +185,7 @@ const games = [
 		name: 'Постройка Города Мечты',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f5353a980b26e0229ed85c804d0/cover1',
 		href: 'https://yandex.ru/games/app/337339',
-		cat: 'online,pop,mobile,top'
+		cat: 'new,online,pop,mobile,top'
 	},
 	{
 		name: 'Флекс Дэш',
