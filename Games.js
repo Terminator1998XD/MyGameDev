@@ -251,6 +251,12 @@ const games = [
     name:'Пасьянс 2048',
     img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f4cf921f41844e12b3bf9871a58/cover1',
     href:'https://yandex.ru/games/app/336906',
+    cat: 'online,pop,mobile,new'
+  },
+  {
+    name:'Стикер Побег от Санитаров',
+    img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f7118378950687db4ee2aaada2f/cover1',
+    href:'https://yandex.ru/games/app/339173',
     cat: 'online,pop,mobile,top,new'
   }
 ]
