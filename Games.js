@@ -122,6 +122,12 @@ const games = [
 		cat:'online,pop,mobile'
 	},
 	{
+		name:'Стикер Побег от Санитаров',
+		img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f7118378950687db4ee2aaada2f/cover1',
+		href:'https://yandex.ru/games/app/339173',
+		cat: 'online,pop,mobile,top,new'
+	},
+	{
 		name: 'Palworld ферма',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018da68f8dbcab392567e24786eb87/cover1',
 		href: 'https://yandex.ru/games/app/292538',
@@ -198,13 +204,7 @@ const games = [
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018d54fc0423577a623be7f22c605f/icon1',
 		href: 'https://yandex.ru/games/app/290763',
 		cat:'online,pop,mobile'
-	},
-	{
-		name: 'Клади дорогу',
-		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d3033b6310c92233f40149199fb/cover1',
-		href: 'https://yandex.ru/games/app/288642',
-		cat:'online,pop,mobile'
-	},
+	},	
 	{
 		name : 'Глобальный GTA Тест',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
@@ -252,11 +252,11 @@ const games = [
     img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f4cf921f41844e12b3bf9871a58/cover1',
     href:'https://yandex.ru/games/app/336906',
     cat: 'online,pop,mobile,new'
-  },
+  },  
   {
-    name:'Стикер Побег от Санитаров',
-    img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f7118378950687db4ee2aaada2f/cover1',
-    href:'https://yandex.ru/games/app/339173',
-    cat: 'online,pop,mobile,top,new'
-  }
+		name: 'Клади дорогу',
+		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d3033b6310c92233f40149199fb/cover1',
+		href: 'noads/car/index.html',
+		cat:'online,pop,mobile,noads'
+	},
 ]
