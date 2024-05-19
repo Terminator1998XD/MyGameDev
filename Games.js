@@ -151,13 +151,7 @@ const games = [
     href: 'https://yandex.ru/games/app/336350?lang=ru',
     cat: 'online,pop,mobile,top,new'
   },
-	{
-		name: 'Слаймы',
-		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
-		href: 'https://yandex.ru/games/app/289283',
-		cat:'online,pop,mobile'
-	},
-	{
+		{
 		name: 'Бешеная косилка',
 		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dcb5b169defc4154f4e25732c57/cover1',
 		href: 'https://yandex.ru/games/app/296180',
@@ -235,6 +229,12 @@ const games = [
     href:'noads/panda/index.html',
     cat: 'online,pop,noads'
   },
+  {
+		name: 'Слаймы',
+		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d637b038fe22e723f62b3c00d9b/cover1',
+		href: 'noads/slime/index.html',
+		cat:'online,noads,pop'
+	},
   {
 		name: 'Cимулятор Космонавта',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2b45ef729356467a86cacc11f6/cover1',
