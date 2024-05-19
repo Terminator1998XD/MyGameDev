@@ -50,6 +50,12 @@ const games = [
     cat:'online,pop,mobile'
 	},
 	{
+		name:'Стикермены Батл Арена',
+		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018f7d45fe8bc21f0eff34d801b189/cover1',
+		href: 'https://yandex.ru/games/app/340416',
+		mobile: true
+	},
+	{
 		name: 'Остров на прокачку',
 		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018e7abb99051859a7e0d61f3ab09a/cover1',
 		href: 'https://yandex.ru/games/app/297810?lang=ru',
