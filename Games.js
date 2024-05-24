@@ -71,7 +71,13 @@ const games = [
 	{
 		name: "Angry Toilets",
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018ce46752871677f39a5385cdf076/cover1',
-		href: 'https://yandex.ru/games/app/283371?lang=ru',
+		href: 'https://mini.vkplay.ru/play/game/angry_toilets/',
+		cat:'online,top,pop,mobile'
+	},
+	{
+		name: "Злые Наггетсы",
+		img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018fa0ed8ff48de5b7ee9d610ae7fe/cover1',
+		href: 'https://yandex.ru/games/app/283371',
 		cat:'online,top,pop,mobile'
 	},
 	{
@@ -192,6 +198,12 @@ const games = [
 		name: 'Постройка Города Мечты',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f5353a980b26e0229ed85c804d0/cover1',
 		href: 'https://yandex.ru/games/app/337339',
+		cat: 'new,online,pop,mobile,top'
+	},
+	{
+		name: 'Наггетсы На Паутине',
+		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018f94ec37ec2e96c7168a033a034b/cover1',
+		href: 'https://yandex.ru/games/app/341959',
 		cat: 'new,online,pop,mobile,top'
 	},
 	{
