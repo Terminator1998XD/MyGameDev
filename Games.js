@@ -70,7 +70,7 @@ const games = [
 	},
 	{
 		name: "Angry Toilets",
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018ce46752871677f39a5385cdf076/cover1',
+		img: 'png/at.png',
 		href: 'https://mini.vkplay.ru/play/game/angry_toilets/',
 		cat:'online,top,pop,mobile'
 	},
