@@ -169,13 +169,7 @@ const games = [
 		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dcb5b169defc4154f4e25732c57/cover1',
 		href: 'https://yandex.ru/games/app/296180',
 		cat:'online,pop,mobile'
-	},
-	{
-		name: 'Прокати девушку по кругу',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
-		href: 'https://yandex.ru/games/app/290879',
-		cat:'online,pop,mobile'
-	},  
+	},	
 	{
 		name: 'ChatGPT Побег',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018db7da5e7b27e2e0c6c14157ee95/cover1',
@@ -236,6 +230,12 @@ const games = [
     href:'noads/balls/index.html',
     cat: 'online,pop,noads'
   },
+  {
+		name: 'Прокати девушку по кругу',
+		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d783605bed140d65f545427cbe3/cover1',
+		href: 'noads/Race/index.html',
+		cat:'online,pop,noads'
+	},  
   {
     name:'Майнкрафт тест и пазлы',
     img: 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb60e5c0e522d2862e852a389aa/cover1',
