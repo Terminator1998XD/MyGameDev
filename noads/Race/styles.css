@@ -1,0 +1,315 @@
+@font-face {
+  font-family: myfont2;
+  src: url("font.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: myfont2, sans-serif;
+	touch-action: none;
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+#scoreblock{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  font-size: 5vh;
+  color:white;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    display: block;
+    cursor: pointer;
+}
+
+.menu{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(212, 211, 212, 0.2);
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 69%;
+  transform: translate(-50%);
+}
+
+.play svg {
+  width: 10vw;
+  height: 10vh;
+  cursor: pointer;
+  transition: width 0.5s, height 0.5s;
+}
+
+.play svg:hover {
+  width: 12vw;
+  height: 12vh;
+}
+
+.musicbtn{
+  position: absolute;
+  left:1vw;
+  top:1vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+}
+
+.soundsbtn{
+  position: absolute;
+  right:1vw;
+  top:1vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+}
+
+#bgleft{
+  position: absolute;
+  left:1vw;
+  top:50vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+
+#bgright{
+  position: absolute;
+  right:1vw;
+  top:50vh;
+  width: 64px;
+  height: 64px;
+  background-color: #4eb352;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 5px;
+  transform: translateY(-50%);
+}
+
+.musicbtn:hover,.soundsbtn:hover,#bgleft:hover,#bgright:hover{
+  background-color: #72d676;
+}
+
+.mgbtn{
+  position: absolute;
+  left: 50vw;
+  bottom: 1vh;
+  transform: translateX(-50%);
+}
+
+.settings img{
+  width: 100%;
+  height: 100%;
+}
+
+#recinfo{
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  color:white;
+  font-size: 4vh;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px){
+	#recinfo{
+	  left: 1%;
+    width: 98%;
+    transform: unset;
+    font-size: 3vh;
+	}
+}
+
+@media (max-width: 600px){
+	#recinfo{
+	  left: 1%;
+    width: 98%;
+    transform: unset;
+    font-size: 2vh;
+	}
+}
+
+.advp{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20vw;
+  font-size: 8;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: #e2ab7f;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px){
+  .advp{
+    width: 60vw !important;
+  }
+
+  .advp button{
+    font-size: 4vh !important;
+  }
+}
+
+.pbar{
+  display: block;
+  height: 4vh;
+  background-color: white;
+}
+
+#timer{
+	position: absolute;
+	z-index:4;
+	top:40vh;
+	left:50%;
+  transform: translate(-50%, -50%);
+}
+
+#timer span{
+	font-size: 25vh;
+	color:white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+button {
+    background-color: #4fb74c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 2vh;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.birdselector{
+  display: block;
+  position: absolute;
+  left: 50vw;
+  top:45vh;
+  transform: translateX(-50%);
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  white-space: nowrap;
+}
+
+.birdselector svg,.birdselector img{
+  width: 100%;
+  height: 100%;
+}
+
+.bl{
+  display: inline-block;
+  width: 10vw;
+  height: 10vh;
+  margin-right: 1vw;
+  cursor: pointer;
+}
+
+.bird{
+  display: inline-block;
+  width: auto;
+  height: 10vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.br{
+  display: inline-block;
+  width: 10vw;
+  height: 10vh;
+  margin-left: 1vw;
+  cursor: pointer;
+}
+
+.bl:hover, .br:hover{
+  opacity: .9;
+}
+.bl:active, .br:active{
+  opacity: .7;
+}
+
+#moregames{
+  position: absolute;
+  width: 15vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-height: 400px){
+  button:not(#moregames button){
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+@media (max-height: 500px){
+	.game{
+	  display: inline-block !important;
+	  margin-left: 0.25vw !important;
+	  margin-right: 0.25vw !important;
+	}
+}
+
+.game{
+  display: block;
+  width: auto;
+  height: 16vh;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+
+.game img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: filter 0.2s;
+}
+
+.game img:hover{
+  filter: brightness(125%);
+}

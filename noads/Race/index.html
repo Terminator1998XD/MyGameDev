@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title translate="Take the girl around">Прокати девушку по кругу</title>
+    <script src="libs/jquery.js"></script>
+	  <script src="libs/howler.js"></script>
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+		<script src="YandexSDKFunctions.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body oncontextmenu="return false;">
+<script src="engine/managers/resurse.js"></script>
+<script src="engine/managers/input.js"></script>
 
+<script src="engine/content/dtc.js"></script>
+<script src="engine/content/anim.js"></script>
+<script src="engine/content/gameobject.js"></script>
+<script src="engine/content/world.js"></script>
+<script src="engine/content/vector.js"></script>
+<script src="engine/content/effects.js"></script>
+
+<script src="engine/engine.js"></script>
+
+<script src="game/cars.js"></script>
+<script src="game/sounds.js"></script>
+<script src="game/local.js"></script>
+<script src="game/girl.js"></script>
+<script src="game/player.js"></script>
+<script src="game/game.js"></script>
+<script src="game/track.js"></script>
+<script src="game/particle.js"></script>
+<script src="game/level.js"></script>
+<script src="game/leaderboard.js"></script>
+<script src="game/settings.js"></script>
+<script src="game/advprompt.js"></script>
+<script src="game/moregames.js"></script>
+<script src="game/bgc.js"></script>
+
+<div id="scoreblock" style="display:none"><span id="score">0</span></div>
+
+<div class="menu" style="display:block">
+	<center id="recinfo">
+		<div><span translate="Game Over: " class="govr">Игра окончена: </span><span translate="You can only drive on the road!">Ездить можно только по дороге!</span></div>
+		<div class="mycrec"><span translate="Current Score: ">Текущее количество очков: </span><span class="crecord">0</span></div>
+		<div class="myrec"><span translate="Record Score: ">Рекордное количество очков: </span><span class="record">0</span></div>
+	</center>
+	<div class="birdselector">
+			<div class="bl"><svg viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#000000" transform="rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#3bc43d" d="M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z"></path><path fill="#FFF" d="M29 14h-9V7L7 18l13 11v-7h9z"></path></g></svg></div>
+			<div class="bird"><img src="textures/bird_1/0.png"></img></div>
+			<div class="br"><svg style="transform:rotate(180deg)" viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#3bc43d" d="M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z"></path><path fill="#FFF" d="M29 14h-9V7L7 18l13 11v-7h9z"></path></g></svg></div>
+	</div>
+	<div class="play" onclick="PlayClick()"><svg viewBox="0 0 36 36" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#20ac22" d="M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z"></path><path fill="#FFF" d="M8 7l22 11L8 29z"></path></g></svg></div>
+	<span class="settings">
+	<div class="musicbtn" varstate="UserMusEnable" isMobile="false">
+		<div class="en">
+			<img src="textures/music_on.png">
+		</div>
+		<div class="dis">
+			<img src="textures/music_off.png">
+		</div>
+	</div>
+	<div class="soundsbtn" varstate="UserSoundEnable" isMobile="true">
+		<div class="en">
+			<img src="textures/sounds_on.png">
+		</div>
+		<div class="dis">
+			<img src="textures/sounds_off.png">
+		</div>
+</div>
+</span>
+<button class="mgbtn" translate="&#128073; Recommended games" onclick="moregames()">&#128073; Рекомендованные игры</button>
+<div id="bgleft"><svg viewBox="-4.5 0 20 20" version="1.1" fill="white" stroke="white"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [white]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="white"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[white]"> </path> </g> </g> </g> </g></svg>
+</div>
+<div id="bgright"><svg viewBox="-4.5 0 20 20" version="1.1" fill="white" stroke="white" style="transform:rotate(180deg)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>arrow_left [white]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -6679.000000)" fill="white"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M338.61,6539 L340,6537.594 L331.739,6528.987 L332.62,6528.069 L332.615,6528.074 L339.955,6520.427 L338.586,6519 C336.557,6521.113 330.893,6527.014 329,6528.987 C330.406,6530.453 329.035,6529.024 338.61,6539" id="arrow_left-[white]"> </path> </g> </g> </g> </g></svg>
+</div>
+<div id="moregames" style="display:none">
+<center><button translate="Back" onclick="moregamesback()">Назад</button></center>
+</div>
+</div>
+</body>
+</html>
