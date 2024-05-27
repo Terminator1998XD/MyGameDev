@@ -12,6 +12,12 @@ const games = [
 		,cat:'online,top,mobile,pop'
 	},
 	{
+		name: 'Мемный Арканойд',
+		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018fa9c55931e402a571a0554669d8/cover1',
+		href:'https://yandex.ru/games/app/336492'
+    ,cat:'online,top,mobile,new'
+	},
+	{
 		name: 'Нубик Выживание и Войнушка',
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018f1b3061b96c9eea4ad3a49ac89c/cover1',
 		href:'https://yandex.ru/games/app/334175'
