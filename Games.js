@@ -1,7 +1,7 @@
 const games = [
 	{
 		name: 'Симулятор пранкера',
-		img : 'https://avatars.mds.yandex.net/get-games/1881364/2a0000018cb5f7edcda8d5f9ecd7b47b7e9f/cover1',
+		img : 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018ee78e64289bc8588422c7d6bd43/cover1',
 		href: 'https://yandex.ru/games/app/283060?lang=ru'
     ,cat:'online,top'
 	},
