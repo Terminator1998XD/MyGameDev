@@ -56,11 +56,29 @@ const games = [
     cat:'online,pop,mobile'
 	},
 	{
+		name:'Анекдоты',
+		img: 'https://avatars.mds.yandex.net/get-games/2977039/2a0000018fc04b5efb72c00fe069252b8e09/cover1',
+		href: 'https://yandex.ru/games/app/344311',
+		cat:'online,mobile,new,trash'
+	},
+	{
+		name:'Летающая Ванна',
+		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018fbf41d4fb73c285bd8e9b5bc2cf/cover1',
+		href: 'https://yandex.ru/games/app/344134',
+		cat:'online,mobile,new,trash,asset'
+	},
+	{
+		name:'В Конце Туннеля',
+		img: 'https://avatars.mds.yandex.net/get-games/10152950/2a0000018fec4922eaeefe2a8e07bfeb19ff/cover1',
+		href: 'https://yandex.ru/games/app/344134',
+		cat:'online,mobile,new,asset'
+	},
+	{
 		name:'Стикермены Батл Арена',
 		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018f7d45fe8bc21f0eff34d801b189/cover1',
-		href: 'https://yandex.ru/games/app/340416',
+		href: 'https://yandex.ru/games/app/346396',
 		mobile: true,
-		cat:'online,pop,new,mobile'
+		cat:'online,pop,mobile'
 	},
 	{
 		name: 'Остров на прокачку',
@@ -93,12 +111,6 @@ const games = [
 		cat:'online,apps,mobile'
 	},
 	{
-		name : 'Skibidi War',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018c4cc7065b38690a3feb6543bc45/cover1',
-		href: 'https://yandex.ru/games/app/270667?lang=ru',
-    cat:'online,top,pop'
-	},
-	{
 		name: 'Симулятор Ствола',
 		img:'https://avatars.mds.yandex.net/get-games/10152950/2a0000018d4573fd8ee28f8a6a6b05e48dcf/cover1',
 		href: 'https://yandex.ru/games/app/289424?lang=ru',
@@ -108,7 +120,7 @@ const games = [
 		name: "Оптические иллюзии",
 		href: "https://yandex.ru/games/app/327905?lang=ru",
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ecd6766d50bbca8cc6e7c066870/cover1',
-    cat:'online,pop,mobile,new'
+    cat:'online,pop,mobile'
 	},
 	{
 		name: "Музыкальный Шар",
@@ -123,14 +135,8 @@ const games = [
 		cat:'online,pop,mobile'
 	},
 	{
-		name: 'Защити Девушку От Зомби',
-		img:'https://avatars.mds.yandex.net/get-games/11385414/2a0000018dc78eddb18e83eed45e9dc10679/cover1',
-		href: 'https://yandex.ru/games/app/296182?lang=ru',
-		cat:'online,pop,mobile'
-	},
-	{
 		name: 'Кото-мешалка слияние котиков',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dd4c6dfa937e5819dbdad29cc19/cover1',
+		img:'https://avatars.mds.yandex.net/get-games/1890793/2a0000019000ef6de278ff345cc898626499/cover1',
 		href: 'https://yandex.ru/games/app/296816?lang=ru',
 		cat:'online,pop,mobile'
 	},
@@ -144,7 +150,7 @@ const games = [
 		name:'Стикер Побег от Санитаров',
 		img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f7118378950687db4ee2aaada2f/cover1',
 		href:'https://yandex.ru/games/app/339173',
-		cat: 'online,pop,mobile,top,new'
+		cat: 'online,pop,mobile,top'
 	},
 	{
 		name: 'Palworld ферма',
@@ -168,7 +174,7 @@ const games = [
     name:'Шейп шарики стрелялка',
     img:'https://avatars.mds.yandex.net/get-games/2977039/2a0000018f43774fde8f1d11a2d01a39597a/cover1',
     href: 'https://yandex.ru/games/app/336350?lang=ru',
-    cat: 'online,pop,mobile,top,new'
+    cat: 'online,pop,mobile,top'
   },
 		{
 		name: 'Бешеная косилка',
@@ -198,7 +204,7 @@ const games = [
 		name: 'Постройка Города Мечты',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f5353a980b26e0229ed85c804d0/cover1',
 		href: 'https://yandex.ru/games/app/337339',
-		cat: 'new,online,pop,mobile,top'
+		cat: 'online,pop,mobile,top'
 	},
 	{
 		name: 'Наггетсы На Паутине',
