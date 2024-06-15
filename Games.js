@@ -12,6 +12,12 @@ const games = [
 		,cat:'online,top,mobile,pop'
 	},
 	{
+		name: 'Не заходи в эту игру ночью',
+		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018ffc0959593caa8775c060000531/cover1',
+		href: 'hhttps://yandex.ru/games/app/346924'
+		,cat:'online,top,mobile,hor'
+	},
+	{
 		name: 'Мемный Арканойд',
 		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018fa9c55931e402a571a0554669d8/cover1',
 		href:'https://yandex.ru/games/app/336492'
