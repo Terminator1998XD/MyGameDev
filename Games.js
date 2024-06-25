@@ -15,7 +15,7 @@ const games = [
 		name: 'Не заходи в эту игру ночью',
 		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018ffc0959593caa8775c060000531/cover1',
 		href: 'hhttps://yandex.ru/games/app/346924'
-		,cat:'online,top,mobile,hor'
+		,cat:'online,top,mobile,hor,new'
 	},
 	{
 		name: 'Мемный Арканойд',
@@ -24,16 +24,22 @@ const games = [
     ,cat:'online,top,mobile,new'
 	},
 	{
+		name: 'Я че Емеля?',
+		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a000001900befb92eccf93716ec93ff298c/cover1',
+		href:'https://yandex.ru/games/app/348141'
+    ,cat:'online,pop,mobile,new'
+	},
+	{
 		name: 'Нубик Выживание и Войнушка',
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018f1b3061b96c9eea4ad3a49ac89c/cover1',
 		href:'https://yandex.ru/games/app/334175'
-    ,cat:'online,top,mobile,new'
+    ,cat:'online,top,mobile'
 	},
 	{
 		name: 'Нубик качалка и драки',
 		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018eff3fb728f3758bb1b160cdf4f8/cover1',
 		href:'https://yandex.ru/games/app/310556'
-		,cat:'online,top,mobile,pop,new'
+		,cat:'online,top,mobile,pop'
 	},
 	{
 		name: 'Шахматы 2048 - Слияние',
@@ -137,7 +143,7 @@ const games = [
 	{
 		name: 'Ниндзя Симулятор',
 		img:'https://avatars.mds.yandex.net/get-games/11385414/2a0000018d031945b991228294d94bcbb69c/cover1',
-		href: 'https://yandex.ru/games/app/286481?lang=ru',
+		href: 'https://www.rustore.ru/catalog/app/com.terminator1998.ninja',
 		cat:'online,pop,mobile'
 	},
 	{
@@ -182,12 +188,6 @@ const games = [
     href: 'https://yandex.ru/games/app/336350?lang=ru',
     cat: 'online,pop,mobile,top'
   },
-		{
-		name: 'Бешеная косилка',
-		img:'https://avatars.mds.yandex.net/get-games/12797757/2a0000018dcb5b169defc4154f4e25732c57/cover1',
-		href: 'https://yandex.ru/games/app/296180',
-		cat:'online,pop,mobile'
-	},	
 	{
 		name: 'ChatGPT Побег',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018db7da5e7b27e2e0c6c14157ee95/cover1',
@@ -198,12 +198,6 @@ const games = [
 		name: 'Красный шар: убегай от лавы',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d27384f04140b1ea604b893c9cc/cover1',
 		href: 'https://yandex.ru/games/app/286735',
-		cat:'online,pop,mobile'
-	},
-	{
-		name: 'Неоновая птица',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018d2725dbcaaf7433070a6b737ca5/cover1',
-		href: 'https://yandex.ru/games/app/288204?lang=ru',
 		cat:'online,pop,mobile'
 	},
 	{
@@ -235,12 +229,6 @@ const games = [
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
 		href: 'https://yandex.ru/games/app/269912?lang=ru',
 		cat:'online,top,pop,mobile,test'
-	},
-	{
-		name : 'Симулятор Акулы',
-		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a0000018bc918654bca4c85e0e0dcbe7c09/cover1',
-		href: 'https://yandex.ru/games/app/271227?lang=ru',
-    cat:'online,pop'
 	},
   {
     name:'Лови шарики по цвету',
@@ -282,13 +270,13 @@ const games = [
     name:'Симулятор Жизни',
     img: 'https://avatars.mds.yandex.net/get-games/1890793/2a0000018f3c9a9d60b4d093523b79681338/cover1',
     href:'https://yandex.ru/games/app/335178',
-    cat: 'online,pop,mobile,top,new'
+    cat: 'online,pop,mobile,top'
   },
 	{
     name:'Пасьянс 2048',
     img: 'https://avatars.mds.yandex.net/get-games/12797757/2a0000018f4cf921f41844e12b3bf9871a58/cover1',
     href:'https://yandex.ru/games/app/336906',
-    cat: 'online,pop,mobile,new'
+    cat: 'online,pop,mobile'
   },  
   {
 		name: 'Клади дорогу',
