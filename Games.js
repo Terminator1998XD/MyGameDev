@@ -2,13 +2,13 @@ const games = [
 	{
 		name: 'Симулятор пранкера',
 		img : 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018ee78e64289bc8588422c7d6bd43/cover1',
-		href: 'https://yandex.ru/games/app/283060?lang=ru'
+		href: 'https://yandex.ru/games/app/283060'
     ,cat:'online,top'
 	},
 	{
 		name: 'Падающие фигуры на двоих',
 		img : 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ee6d2ddd76769f22cbc50e237ce/cover1',
-		href: 'https://yandex.ru/games/app/328421?lang=ru'
+		href: 'https://yandex.ru/games/app/328421'
 		,cat:'online,top,mobile,pop'
 	},
 	{
@@ -26,7 +26,7 @@ const games = [
 	{
 		name: 'Шахматы 2048 - Слияние',
 		img : 'https://avatars.mds.yandex.net/get-games/3006389/2a0000018e22328678ef4bf46b61e853f9aa/cover1',
-		href: 'https://yandex.ru/games/app/297027?lang=ru'
+		href: 'https://yandex.ru/games/app/297027'
     ,cat:'online,pop,mobile'
 	},
 	{
@@ -52,7 +52,7 @@ const games = [
 	{
 		name: 'Остров на прокачку',
 		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000018e7abb99051859a7e0d61f3ab09a/cover1',
-		href: 'https://yandex.ru/games/app/297810?lang=ru',
+		href: 'https://yandex.ru/games/app/297810',
     cat:'online,pop'
 	},
 	{
@@ -81,13 +81,13 @@ const games = [
 	},
 	{
 		name: "Оптические иллюзии",
-		href: "https://yandex.ru/games/app/327905?lang=ru",
+		href: "https://yandex.ru/games/app/327905",
 		img: 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ecd6766d50bbca8cc6e7c066870/cover1',
     cat:'online,pop,mobile'
 	},
 	{
 		name: "Музыкальный Шар",
-		href: "https://yandex.ru/games/app/334912?lang=ru",
+		href: "https://yandex.ru/games/app/334912",
 		img: 'https://avatars.mds.yandex.net/get-games/11385414/2a0000018f296039bef9bc2998440c5517e6/cover1',
 		cat:'online,pop,mobile'
 	},
@@ -100,7 +100,7 @@ const games = [
 	{
 		name: 'Кото-мешалка слияние котиков',
 		img:'https://avatars.mds.yandex.net/get-games/1890793/2a0000019000ef6de278ff345cc898626499/cover1',
-		href: 'https://yandex.ru/games/app/296816?lang=ru',
+		href: 'https://yandex.ru/games/app/296816',
 		cat:'online,pop,mobile'
 	},
 	{
@@ -136,7 +136,7 @@ const games = [
   {
     name:'Шейп шарики стрелялка',
     img:'https://avatars.mds.yandex.net/get-games/2977039/2a0000018f43774fde8f1d11a2d01a39597a/cover1',
-    href: 'https://yandex.ru/games/app/336350?lang=ru',
+    href: 'https://yandex.ru/games/app/336350',
     cat: 'online,pop,mobile,top'
   },
 	{
@@ -148,31 +148,25 @@ const games = [
 	{
 		name: 'Побег от огня Квадробера',
 		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a00000190a0a15133105f493b04a2a213c2/cover1',
-		href: 'https://yandex.ru/games/app/356390?lang=ru',
+		href: 'https://yandex.ru/games/app/356390',
 		cat:'online,pop,mobile,new'
 	},
 	{
 		name: 'Фонк - Веселый Паркурист',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a00000190aae698b860d272f4d5ef189f0a/cover1',
-		href: 'https://yandex.ru/games/app/357220?lang=ru',
+		href: 'https://yandex.ru/games/app/357220',
 		cat:'online,pop,mobile,new'
 	},
 	{
 		name: 'ХОМЯК - Ключи Головоломка',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a00000190de48d64639202c5a048df4c40a/cover1',
-		href: 'https://yandex.ru/games/app/359617?lang=ru',
+		href: 'https://yandex.ru/games/app/359617',
 		cat:'online,pop,mobile,new'
 	},
 	{
 		name: 'Blum - Симулятор крипто бизнеса',
 		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a00000190d476f7f3f4bed9ae0ba18afa13/cover1',
-		href: 'https://yandex.ru/games/app/359134?lang=ru',
-		cat:'online,pop,mobile,new'
-	},
-	{
-		name: 'Blum - Симулятор крипто бизнеса',
-		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a00000190d476f7f3f4bed9ae0ba18afa13/cover1',
-		href: 'https://yandex.ru/games/app/359134?lang=ru',
+		href: 'https://yandex.ru/games/app/359134',
 		cat:'online,pop,mobile,new'
 	},
 	{
@@ -190,7 +184,7 @@ const games = [
 	{
 		name: 'Epic Bubble Shooter',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a000001909c96c378f0bdc0bea4a7aac2e6/cover1',
-		href: 'https://yandex.ru/games/app/356205?lang=ru',
+		href: 'https://yandex.ru/games/app/356205',
 		cat: 'online,pop,mobile,new'
 	},
 	{
@@ -226,7 +220,7 @@ const games = [
 	{
 		name : 'Глобальный GTA Тест',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018bbcedecc582e00f9bb083621504/cover1',
-		href: 'https://yandex.ru/games/app/269912?lang=ru',
+		href: 'https://yandex.ru/games/app/269912',
 		cat:'online,top,pop,mobile,test'
 	},
   {
