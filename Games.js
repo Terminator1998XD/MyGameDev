@@ -6,10 +6,16 @@ const games = [
     ,cat:'online,top'
 	},
 	{
-		name: 'Падающие фигуры на двоих',
+		name: 'Шметрис на двоих',
 		img : 'https://avatars.mds.yandex.net/get-games/13012056/2a0000018ee6d2ddd76769f22cbc50e237ce/cover1',
-		href: 'https://yandex.ru/games/app/328421'
+		href: 'https://yandex.ru/games/app/364607'
 		,cat:'online,top,mobile,pop'
+	},
+	{
+		name: 'Ниндзя Симулятор',
+		img : 'https://avatars.mds.yandex.net/get-games/1881371/2a000001914c3e59e1ce886a740cf3f9029f/cover1',
+		href: 'https://yandex.ru/games/app/364916'
+		,cat:'online,top,mobile,pop,new'
 	},
 	{
 		name: 'Нубик Выживание и Войнушка',
