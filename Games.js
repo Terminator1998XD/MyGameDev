@@ -1,5 +1,53 @@
 const games = [
 	{
+		name: 'Красный vs Синий: Линия Фронта',
+		img : 'https://avatars.mds.yandex.net/get-games/10152950/2a0000019301f4fab29e13de68f85cbf202d/cover1',
+		href: 'https://yandex.ru/games/app/385786?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'Ограбление банка - Классика',
+		img : 'https://avatars.mds.yandex.net/get-games/13012056/2a0000019209273e63e94799423ca23b7ed9/cover1',
+		href: 'https://yandex.ru/games/app/371944?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'Сталкер 2: Рейд на базу',
+		img : 'https://avatars.mds.yandex.net/get-games/6300668/2a00000193773f837726ebca8672ad39535b/cover1',
+		href: 'https://yandex.ru/games/app/388240?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'Побег из тюрьмы - Классика',
+		img : 'https://avatars.mds.yandex.net/get-games/1892995/2a0000019338e780172938d1f01205e4ddaa/cover1',
+		href: 'https://yandex.ru/games/app/388496?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'Спайдер Ограбление Банка',
+		img : 'https://avatars.mds.yandex.net/get-games/2977039/2a0000019301f03c6b221513b57bfdb56a44/cover1',
+		href: 'https://yandex.ru/games/app/383290?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'GTA 6 - Vice Town',
+		img : 'https://avatars.mds.yandex.net/get-games/6300668/2a0000019314d1cc86d349818f8376497e6c/cover1',
+		href: 'https://yandex.ru/games/app/386685?lang=ru'
+    ,cat:'online,top,new'
+	},
+	{
+		name: 'Как достать Тимоху',
+		img : 'https://avatars.mds.yandex.net/get-games/2977039/2a0000019284975750562e121935cfe17bfa/cover1',
+		href: 'https://yandex.ru/games/app/379157?lang=ru'
+    ,cat:'online,top'
+	},
+	{
+		name: 'Бимка Драйв',
+		img : 'https://avatars.mds.yandex.net/get-games/1890793/2a000001932b3dc67c963dccfd0553deade2/cover1',
+		href: 'https://yandex.ru/games/app/384780?lang=ru'
+    ,cat:'online,top'
+	},
+	{
 		name: 'Симулятор пранкера',
 		img : 'https://avatars.mds.yandex.net/get-games/6238841/2a0000018ee78e64289bc8588422c7d6bd43/cover1',
 		href: 'https://yandex.ru/games/app/283060'
@@ -15,7 +63,7 @@ const games = [
 		name: 'Ниндзя Симулятор',
 		img : 'https://avatars.mds.yandex.net/get-games/1881371/2a000001914c3e59e1ce886a740cf3f9029f/cover1',
 		href: 'https://yandex.ru/games/app/364916'
-		,cat:'online,top,mobile,pop,new'
+		,cat:'online,top,mobile,pop'
 	},
 	{
 		name: 'Нубик Выживание и Войнушка',
@@ -155,67 +203,67 @@ const games = [
 		name: 'Побег от огня Квадробера',
 		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a00000190a0a15133105f493b04a2a213c2/cover1',
 		href: 'https://yandex.ru/games/app/356390',
-		cat:'online,pop,mobile,new'
+		cat:'online,pop,mobile'
 	},
 	{
 		name: 'Фонк - Веселый Паркурист',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a00000190aae698b860d272f4d5ef189f0a/cover1',
 		href: 'https://yandex.ru/games/app/357220',
-		cat:'online,pop,mobile,new'
+		cat:'online,pop,mobile'
 	},
 	{
 		name: 'ХОМЯК - Ключи Головоломка',
 		img: 'https://avatars.mds.yandex.net/get-games/6238841/2a00000190de48d64639202c5a048df4c40a/cover1',
 		href: 'https://yandex.ru/games/app/359617',
-		cat:'online,pop,mobile,new'
+		cat:'online,pop,mobile'
 	},
 	{
 		name: 'Blum - Симулятор крипто бизнеса',
 		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a00000190d476f7f3f4bed9ae0ba18afa13/cover1',
 		href: 'https://yandex.ru/games/app/359134',
-		cat:'online,pop,mobile,new'
+		cat:'online,pop,mobile'
 	},
 	{
 		name: 'Все дойдем до клабика',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a00000190b5a97db7f1b78c77eb52b79969/cover1',
 		href: 'https://yandex.ru/games/app/357713',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Фонк - Эпичный Дрифт',
 		img: 'https://avatars.mds.yandex.net/get-games/11374519/2a000001909c61715482a3f01d9697c90b15/cover1',
 		href: 'https://yandex.ru/games/app/356160',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Epic Bubble Shooter',
 		img: 'https://avatars.mds.yandex.net/get-games/1890793/2a000001909c96c378f0bdc0bea4a7aac2e6/cover1',
 		href: 'https://yandex.ru/games/app/356205',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Фруктовый Шеф Повар',
 		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a00000190e87793b818ac18c8f2165e9f93/cover1',
 		href: 'https://yandex.ru/games/app/360201',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Хамстер Комбат - Фармилка',
 		img: 'https://avatars.mds.yandex.net/get-games/1881364/2a00000190a23fb8a0a994d0a237512212d1/cover1',
 		href: 'https://yandex.ru/games/app/356425',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Квадроберы слияние Фурри',
 		img: 'https://avatars.mds.yandex.net/get-games/1881371/2a00000190a0e94d889be523ca605a7ad11d/cover1',
 		href: 'https://yandex.ru/games/app/356389',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Двойки Слияние - 2048',
 		img: 'https://avatars.mds.yandex.net/get-games/1892995/2a00000190afac3d395b9ec99d7d981148ea/cover1',
 		href: 'https://yandex.ru/games/app/357463',
-		cat: 'online,pop,mobile,new'
+		cat: 'online,pop,mobile'
 	},
 	{
 		name: 'Флекс Дэш',
